@@ -27,14 +27,50 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    backface-visibility: hidden;
 }
 
 .main-header-text {
     display: block;
     font-size: 2.5em;
+    animation: moveInFromLeft 1s ease-out;
 }
 
 .sub-header-text {
     display: block;
-    font-size: 1.5em
+    font-size: 1.5em;
+    animation: moveInFromRight 1s ease-out;
+}
+
+@keyframes moveInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    50% {
+        transform: translatex(110px); 
+
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    50% {
+        transform: translatex(-50px)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
 }
