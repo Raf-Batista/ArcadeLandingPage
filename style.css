@@ -35,12 +35,14 @@ body {
     display: block;
     font-size: 2.5em;
     animation: moveInFromLeft 1s ease-out;
+    margin-bottom: 10px;
 }
 
 .sub-header-text {
     display: block;
     font-size: 1.5em;
     animation: moveInFromRight 1s ease-out;
+    margin-bottom: 30px;
 }
 
 @keyframes moveInFromLeft {
@@ -75,3 +77,33 @@ body {
         transform: translate(0);
     }
 }
+
+.btn:link, 
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    transform: translateY(0);
+    transition: all .5s;
+    border-radius: 100px;
+}
+
+.btn-white {
+    background-color: #ffffff;
+    color: #777777;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
+}
+
+
+
+
