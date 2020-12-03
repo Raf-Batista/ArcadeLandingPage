@@ -1,14 +1,21 @@
-* {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
 }
 
 body {
-    letter-spacing: .5em;
+    letter-spacing: 1rem;
     color: rgb(240, 248, 255);
     font-family: 'Ubuntu Mono', monospace;
-    padding: 30px;
+    padding: 3rem;
+    box-sizing: border-box;
 }
 
 .header {
@@ -23,6 +30,7 @@ body {
 }
 
 .header a {
+    font-size: x-large;
     font-weight: bolder;
 }
 
@@ -37,16 +45,16 @@ body {
 
 .main-header-text {
     display: block;
-    font-size: 2.5em;
+    font-size: 5rem;
     animation: moveInFromLeft 1s ease-out;
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
 }
 
 .sub-header-text {
     display: block;
-    font-size: 1.5em;
+    font-size: 3rem;
     animation: moveInFromRight 1s ease-out;
-    margin-bottom: 30px;
+    margin-bottom: 3rem;
 }
 
 @keyframes moveInFromLeft {
@@ -98,10 +106,10 @@ body {
 .btn:visited {
     text-transform: uppercase;
     text-decoration: none;
-    padding: 15px 40px;
+    padding: 1.5rem 4rem;
     display: inline-block;
     transition: all .5s;
-    border-radius: 100px;
+    border-radius: 10rem;
     position: relative;
 }
 
@@ -112,12 +120,12 @@ body {
 
 .btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.6);
 }
 
 .btn:active {
     transform: translateY(-1px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.6);
 }
 
 .btn::after {
@@ -125,7 +133,7 @@ body {
     display: inline-block;
     height: 100%; 
     width: 100%;
-    border-radius: 100px; 
+    border-radius: 10rem; 
     position: absolute; 
     top: 0; 
     left: 0;
