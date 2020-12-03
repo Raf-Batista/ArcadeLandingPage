@@ -34,7 +34,7 @@ body {
     font-weight: bolder;
 }
 
-.header-text {
+.header__text {
     position: absolute; 
     top: 40%;
     left: 50%;
@@ -43,14 +43,14 @@ body {
     backface-visibility: hidden;
 }
 
-.main-header-text {
+.heading-main-text {
     display: block;
     font-size: 5rem;
     animation: moveInFromLeft 1s ease-out;
     margin-bottom: 1rem;
 }
 
-.sub-header-text {
+.heading-sub-text {
     display: block;
     font-size: 3rem;
     animation: moveInFromRight 1s ease-out;
@@ -113,7 +113,7 @@ body {
     position: relative;
 }
 
-.btn-white {
+.btn--white {
     background-color: #ffffff;
     color: #777777;
 }
@@ -142,7 +142,7 @@ body {
  
 }
 
-.btn-white::after {
+.btn--white::after {
     background-color: #ffffff;
 }
 
@@ -151,7 +151,7 @@ body {
     opacity: 0;
 }
 
-.btn-animated {
+.btn--animated {
     animation: moveInBottom .5s ease-out .75s; 
     animation-fill-mode: backwards;
 }
