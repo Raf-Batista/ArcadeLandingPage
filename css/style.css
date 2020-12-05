@@ -20,18 +20,17 @@ body {
   background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.8), rgba(64, 64, 64, 0.8)), url("../images/erik-mclean-359yV-5925c-unsplash.jpg");
   background-size: cover;
   background-position: top; }
+  .header__text {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    backface-visibility: hidden; }
 
 .header a {
   font-size: x-large;
   font-weight: bolder; }
-
-.header__text {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  backface-visibility: hidden; }
 
 .heading-main-text {
   display: block;
