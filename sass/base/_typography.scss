@@ -1,5 +1,5 @@
 body {
-    letter-spacing: 1rem;
+    // letter-spacing: 1rem;
     color: rgb(240, 248, 255);
     font-family: 'Ubuntu Mono', monospace;
     padding: 3rem;
@@ -7,7 +7,7 @@ body {
 
 .heading-main-text {
     display: block;
-    font-size: 5rem;
+    font-size: 10rem;
     animation: moveInFromLeft 1s ease-out;
     margin-bottom: 1rem;
 }
