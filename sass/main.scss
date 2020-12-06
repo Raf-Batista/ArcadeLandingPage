@@ -41,11 +41,11 @@ body {
         text-align: center;
         backface-visibility: hidden;
     }
-}
 
-.header a {
-    font-size: x-large;
-    font-weight: bolder;
+    & a {
+        font-size: x-large;
+        font-weight: bolder;
+    }
 }
 
 .heading-main-text {

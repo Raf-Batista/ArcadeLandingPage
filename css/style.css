@@ -27,10 +27,9 @@ body {
     transform: translate(-50%, -50%);
     text-align: center;
     backface-visibility: hidden; }
-
-.header a {
-  font-size: x-large;
-  font-weight: bolder; }
+  .header a {
+    font-size: x-large;
+    font-weight: bolder; }
 
 .heading-main-text {
   display: block;
