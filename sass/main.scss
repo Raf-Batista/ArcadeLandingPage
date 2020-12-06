@@ -13,20 +13,6 @@
 
 @import "./pages/home.scss";
 
-.heading-main-text {
-    display: block;
-    font-size: 5rem;
-    animation: moveInFromLeft 1s ease-out;
-    margin-bottom: 1rem;
-}
-
-.heading-sub-text {
-    display: block;
-    font-size: 3rem;
-    animation: moveInFromRight 1s ease-out;
-    margin-bottom: 3rem;
-}
-
 @keyframes moveInFromLeft {
     0% {
         opacity: 0;
