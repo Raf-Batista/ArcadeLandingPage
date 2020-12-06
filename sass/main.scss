@@ -9,31 +9,6 @@
 
 @import "./pages/home.scss";
 
-$color-primary: #000000;
-$color-secondary: #52057b; 
-$color-tertiary: #892cdc; 
-$color-quartary: #bc6ff1;
-
-*,
-*::before,
-*::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
-}
-
-html {
-    font-size: 62.5%;
-}
-
-body {
-    letter-spacing: 1rem;
-    color: rgb(240, 248, 255);
-    font-family: 'Ubuntu Mono', monospace;
-    padding: 3rem;
-    box-sizing: border-box;
-}
-
 .header {
     height: 95vh;
     background-image: linear-gradient(
