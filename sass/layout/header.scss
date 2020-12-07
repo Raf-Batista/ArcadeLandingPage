@@ -7,6 +7,7 @@
         url('../images/erik-mclean-359yV-5925c-unsplash.jpg');
     background-size: cover;
     background-position: top;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0% 100%);
 
     &__text {
         position: absolute; 
