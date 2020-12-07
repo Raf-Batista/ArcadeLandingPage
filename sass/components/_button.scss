@@ -17,12 +17,12 @@
 
     &:hover {
         transform: translateY(-3px);
-        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.6);
+        box-shadow: 0 1rem 2rem rgba($color-black, 0.6);
     }
 
     &:active {
         transform: translateY(-1px);
-        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.6);
+        box-shadow: 0 .5rem 1rem rgba($color-black, 0.6);
     }
 
     &::after {
@@ -51,6 +51,32 @@
     &--animated {
         animation: moveInBottom .5s ease-out .75s; 
         animation-fill-mode: backwards;
+    }
+}
+
+.btn-text {
+   
+    
+    &:link,
+    &:visited {
+        display: inline-block;
+        font-size: $default-font-size;
+        text-decoration: none;
+        border-bottom: .1rem solid $color-primary;
+        transition: all .2s;
+        color: $color-secondary;
+        padding: .3rem;
+    }
+    
+    &:hover {
+        background-color: $color-primary;
+        color: #ffffff;
+        transform: translateY(-10%);
+        box-shadow: 0 1rem 2rem rgba($color-black, .15);
+    }
+
+    &:active {
+        transform: translate(0);
     }
 }
 
