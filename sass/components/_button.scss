@@ -60,14 +60,14 @@
         display: inline-block;
         font-size: $default-font-size;
         text-decoration: none;
-        border-bottom: .1rem solid $color-primary;
+        border-bottom: .1rem solid $color-secondary;
         transition: all .2s;
         color: $color-secondary;
         padding: .3rem;
     }
     
     &:hover {
-        background-color: $color-primary;
+        background-color: $color-secondary;
         color: #ffffff;
         transform: translateY(-10%);
         box-shadow: 0 1rem 2rem rgba($color-black, .15);
