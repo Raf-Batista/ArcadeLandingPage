@@ -2,9 +2,9 @@
     height: 95vh;
     background-image: linear-gradient(
         to bottom right, 
-        rgba($color-primary, 0.8), 
-        rgba(lighten($color-primary, 25%), 0.8)), 
-        url('../images/erik-mclean-359yV-5925c-unsplash.jpg');
+        rgba($color-secondary, 0.8), 
+        rgba(lighten($color-tertiary, 25%), 0.8)), 
+        url('../images/arc-1.jpg');
     background-size: cover;
     background-position: top;
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0% 100%);
