@@ -1,0 +1,39 @@
+.card {
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+    height: 50rem; // We can not use clearfix to to fix the issue of the element collapsing on its height. Give the parent and the children the same height
+
+    &__side {
+        background-color: $color-tertiary;
+        height: 50rem;
+        transition: all .8s ease;
+        position: absolute; 
+        top: 0;
+        left: 0;
+        width: 100%; // We need 100 percent width of the element will take up the width of the text
+        backface-visibility: hidden; // Fix the animation issue since we don't want the element behind to be seen
+        border-radius: .5rem;
+        box-shadow: 0 1rem 2rem rgba($color-black, .15);
+
+        &--front {
+            background-color: $color-white;
+        }
+        &--back {
+            background-color: $color-quartary;
+            transform: rotateY(180deg);
+
+            &-1 {
+                background-image: linear-gradient(to right bottom, $color-secondary, darken($color-secondary, 25%));
+            }
+        }
+    }
+
+    &:hover &__side--front {
+        transform: rotateY(-180deg);
+    }
+
+    &:hover &__side--back {
+        transform: rotateY(0);
+    }
+}
