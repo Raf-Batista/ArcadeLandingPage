@@ -1,0 +1,23 @@
+.section-about {
+    background-color: $color-grey-light; 
+    padding: 25rem 0;
+    margin-top: -20vh;
+}
+
+.section-features {
+    padding: 20rem 0;
+    background-image: linear-gradient(
+        to bottom right, 
+        rgba($color-secondary, 0.8), 
+        rgba(lighten($color-tertiary, 25%), 0.8)), 
+        url('../../images/arc-6.jpg');
+    background-size: cover;
+    background-position: center;
+
+    transform: skewY(-7deg);
+    margin-top: -11rem;
+
+    & > * {
+        transform: skewY(7deg);
+    }
+}
