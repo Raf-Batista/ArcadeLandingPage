@@ -25,7 +25,14 @@
            
             &--1 {
                 background-image: linear-gradient(to right bottom, $color-secondary, darken($color-secondary, 25%));
-                
+            }
+
+            &--2 {
+                background-image: linear-gradient(to right bottom, $color-tertiary, darken($color-tertiary, 25%));
+            }
+
+            &--3 {
+                background-image: linear-gradient(to right bottom, $color-quartary, darken($color-quartary, 25%));
             }
         }
     }
@@ -44,9 +51,19 @@
         background-blend-mode: screen;
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 82%, 0 100%);
         clip-path: polygon(0 0, 100% 0, 100% 82%, 0 100%);
+        border-top-left-radius: .3rem;
+        border-top-right-radius: .3rem;
 
         &--1 {
             background-image: linear-gradient(to right bottom, $color-secondary, darken($color-secondary, 25%)), url(../images/card-2.jpg);
+        }
+
+        &--2 {
+            background-image: linear-gradient(to right bottom, $color-tertiary, darken($color-tertiary, 25%)), url(../images/card-1.jpg);
+        }
+
+        &--3 {
+            background-image: linear-gradient(to right bottom, $color-quartary, darken($color-quartary, 25%)), url(../images/card-3.jpg);
         }
     }
 
@@ -75,6 +92,22 @@
                 rgba(darken($color-secondary, 25%), .85)
             );
         }
+
+        &--2 {
+            background-image: linear-gradient(
+                to right bottom, 
+                rgba(lighten($color-tertiary, 25%), .85),
+                rgba(darken($color-tertiary, 25%), .85)
+            );
+        }
+
+        &--3 {
+            background-image: linear-gradient(
+                to right bottom, 
+                rgba(lighten($color-quartary, 25%), .85),
+                rgba(darken($color-quartary, 25%), .85)
+            );
+        }
     }
 
     &__details {
@@ -92,6 +125,23 @@
                     border-bottom: 1px solid $color-grey-dark;
                 }
             }
+        }
+    }
+
+    &__cta {
+        position: absolute;
+        top: 50%; 
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        text-align: center;
+        p {
+            color: $color-white;
+        }
+
+        a {
+          font-size: 1.5rem;
+          font-weight: bolder;
         }
     }
 }
