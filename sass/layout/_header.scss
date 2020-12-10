@@ -2,8 +2,8 @@
     height: 95vh;
     background-image: linear-gradient(
         to bottom right, 
-        rgba($color-secondary, 0.8), 
-        rgba(lighten($color-tertiary, 25%), 0.8)), 
+        rgba($color-primary-dark, 0.8), 
+        rgba($color-primary-light, 0.8)), 
         url(../images/arc-1.jpg);
     background-size: cover;
     background-position: top;
