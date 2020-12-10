@@ -2,11 +2,11 @@
     perspective: 150rem;
     -moz-perspective: 150rem;
     position: relative;
-    height: 50rem; // We can not use clearfix to to fix the issue of the element collapsing on its height. Give the parent and the children the same height
+    height: 52rem; // We can not use clearfix to to fix the issue of the element collapsing on its height. Give the parent and the children the same height
 
     &__side {
         background-color: $color-tertiary;
-        height: 50rem;
+        height: 52rem;
         transition: all .8s ease;
         position: absolute; 
         top: 0;
@@ -22,9 +22,10 @@
         &--back {
             background-color: $color-quartary;
             transform: rotateY(180deg);
-
-            &-1 {
+           
+            &--1 {
                 background-image: linear-gradient(to right bottom, $color-secondary, darken($color-secondary, 25%));
+                
             }
         }
     }
@@ -35,5 +36,62 @@
 
     &:hover &__side--back {
         transform: rotateY(0);
+    }
+
+    &__picture {
+        background-size: cover;
+        height: 23rem;
+        background-blend-mode: screen;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 82%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 82%, 0 100%);
+
+        &--1 {
+            background-image: linear-gradient(to right bottom, $color-secondary, darken($color-secondary, 25%)), url(../images/card-2.jpg);
+        }
+    }
+
+    &__heading {
+        font-size: 2.8rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        text-align: right;
+        color: $color-white;
+        position: absolute;
+        top: 12rem;
+        right: 2.5rem;
+        width: 50%;
+    }
+
+    &__heading-span {
+        font-size: 4rem;
+        padding: .2rem 1rem;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+
+        &--1 {
+            background-image: linear-gradient(
+                to right bottom, 
+                rgba(lighten($color-secondary, 25%), .85),
+                rgba(darken($color-secondary, 25%), .85)
+            );
+        }
+    }
+
+    &__details {
+        padding: 3rem;
+        ul {
+            list-style: none;
+            width: 80%;
+            margin: 0 auto;
+            li {
+                text-align: center;
+                font-size: 1.5rem;
+                padding: 1rem;
+                
+                &:not(:last-child) {
+                    border-bottom: 1px solid $color-grey-dark;
+                }
+            }
+        }
     }
 }
