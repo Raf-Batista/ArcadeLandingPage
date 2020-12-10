@@ -24,7 +24,7 @@
             transform: rotateY(180deg);
            
             &--1 {
-                background-image: linear-gradient(to right bottom, $color-secondary, darken($color-secondary, 25%));
+                background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark, 25%);
             }
 
             &--2 {
@@ -55,7 +55,7 @@
         border-top-right-radius: .3rem;
 
         &--1 {
-            background-image: linear-gradient(to right bottom, $color-secondary, darken($color-secondary, 25%)), url(../images/card-2.jpg);
+            background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark), url(../images/card-2.jpg);
         }
 
         &--2 {
@@ -88,8 +88,8 @@
         &--1 {
             background-image: linear-gradient(
                 to right bottom, 
-                rgba(lighten($color-secondary, 25%), .85),
-                rgba(darken($color-secondary, 25%), .85)
+                rgba($color-primary-light, .85),
+                rgba($color-primary-dark, .85)
             );
         }
 
