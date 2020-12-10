@@ -61,7 +61,7 @@ body {
   text-transform: uppercase;
   font-weight: 700;
   display: inline-block;
-  background-image: linear-gradient(to right, #bc6ff1, #892cdc);
+  background-image: linear-gradient(to right, #0ba366, #9ad3bc);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -96,6 +96,97 @@ p {
 .u-negative-margin-md {
   margin-top: -5rem; }
 
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 52rem; }
+  .card__side {
+    background-color: #f5b461;
+    height: 52rem;
+    transition: all .8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: .5rem;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15); }
+    .card__side--front {
+      background-color: #ffffff; }
+    .card__side--back {
+      background-color: #ec524b;
+      transform: rotateY(180deg); }
+      .card__side--back--1 {
+        background-image: linear-gradient(to right bottom, #f3eac2, #f5d755, 25%); }
+      .card__side--back--2 {
+        background-image: linear-gradient(to right bottom, #f5b461, #ca770d); }
+      .card__side--back--3 {
+        background-image: linear-gradient(to right bottom, #ec524b, #a61812); }
+  .card:hover .card__side--front {
+    transform: rotateY(-180deg); }
+  .card:hover .card__side--back {
+    transform: rotateY(0); }
+  .card__picture {
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: screen;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 82%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 82%, 0 100%);
+    border-top-left-radius: .3rem;
+    border-top-right-radius: .3rem; }
+    .card__picture--1 {
+      background-image: linear-gradient(to right bottom, #9ad3bc, #0ba366), url(../images/card-2.jpg); }
+    .card__picture--2 {
+      background-image: linear-gradient(to right bottom, #f5b461, #ca770d), url(../images/card-1.jpg); }
+    .card__picture--3 {
+      background-image: linear-gradient(to right bottom, #ec524b, #a61812), url(../images/card-3.jpg); }
+  .card__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: right;
+    color: #ffffff;
+    position: absolute;
+    top: 12rem;
+    right: 2.5rem;
+    width: 50%; }
+  .card__heading-span {
+    font-size: 4rem;
+    padding: .2rem 1rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone; }
+    .card__heading-span--1 {
+      background-image: linear-gradient(to right bottom, rgba(154, 211, 188, 0.85), rgba(11, 163, 102, 0.85)); }
+    .card__heading-span--2 {
+      background-image: linear-gradient(to right bottom, rgba(253, 237, 217, 0.85), rgba(202, 119, 13, 0.85)); }
+    .card__heading-span--3 {
+      background-image: linear-gradient(to right bottom, rgba(248, 193, 190, 0.85), rgba(166, 24, 18, 0.85)); }
+  .card__details {
+    padding: 3rem; }
+    .card__details ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto; }
+      .card__details ul li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem; }
+        .card__details ul li:not(:last-child) {
+          border-bottom: 1px solid #eee; }
+  .card__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center; }
+    .card__cta p {
+      color: #ffffff; }
+    .card__cta a {
+      font-size: 1.5rem;
+      font-weight: bolder; }
+
 .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
@@ -108,6 +199,13 @@ p {
 .btn--white {
   background-color: #ffffff;
   color: #777777; }
+
+.btn--green {
+  background-color: #0ba366;
+  color: #ffffff; }
+
+.btn--lg {
+  font-size: 3rem; }
 
 .btn:hover {
   transform: translateY(-3px);
@@ -132,6 +230,9 @@ p {
 .btn--white::after {
   background-color: #ffffff; }
 
+.btn--green::after {
+  background-color: #0ba366; }
+
 .btn:hover::after {
   transform: scaleX(1.4) scaleY(1.6);
   opacity: 0; }
@@ -144,13 +245,13 @@ p {
   display: inline-block;
   font-size: 1.6rem;
   text-decoration: none;
-  border-bottom: 0.1rem solid #52057b;
+  border-bottom: 0.1rem solid #f3eac2;
   transition: all .2s;
-  color: #52057b;
+  color: #f3eac2;
   padding: .3rem; }
 
 .btn-text:hover {
-  background-color: #52057b;
+  background-color: #f3eac2;
   color: #ffffff;
   transform: translateY(-10%);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15); }
@@ -178,7 +279,7 @@ p {
       left: 20%;
       top: 10rem; }
     .composition__photo:hover {
-      outline: 1.5rem solid #52057b;
+      outline: 1.5rem solid #0ba366;
       transform: scale(1.05) translateY(-0.5rem);
       box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
       z-index: 2; }
@@ -198,11 +299,37 @@ p {
   .feature-box:hover {
     transform: translateY(-3rem) scale(1.03); }
 
+.story {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  border-radius: 3rem;
+  margin-top: 8rem;
+  padding: 6rem 9rem 10rem;
+  transform: skew(-15deg);
+  font-size: 1.6rem; }
+  .story__shape {
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    background-color: orangered;
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(-3rem) skew(15deg); }
+  .story__image {
+    height: 100%; }
+  .story__text {
+    transform: skew(15deg); }
+
 .header {
   height: 95vh;
-  background-image: linear-gradient(to bottom right, rgba(82, 5, 123, 0.8), rgba(198, 153, 238, 0.8)), url("../../images/arc-1.jpg");
+  background-image: linear-gradient(to bottom right, rgba(11, 163, 102, 0.8), rgba(154, 211, 188, 0.8)), url(../images/arc-1.jpg);
   background-size: cover;
   background-position: top;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0% 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0% 100%); }
   .header__text {
     position: absolute;
@@ -222,13 +349,22 @@ p {
 
 .section-features {
   padding: 20rem 0;
-  background-image: linear-gradient(to bottom right, rgba(82, 5, 123, 0.8), rgba(198, 153, 238, 0.8)), url("../../images/arc-6.jpg");
+  background-image: linear-gradient(to bottom right, rgba(243, 234, 194, 0.8), rgba(253, 237, 217, 0.8)), url(../images/arc-6.jpg);
   background-size: cover;
   background-position: center;
   transform: skewY(-7deg);
   margin-top: -11rem; }
   .section-features > * {
     transform: skewY(7deg); }
+
+.section-arcades {
+  background-color: #f7f7f7;
+  padding: 25rem 0 15rem 0;
+  margin-top: -10vh; }
+
+.section-stories {
+  padding: 15rem 0;
+  background-color: #f7f7f7; }
 
 .row {
   max-width: 114rem;
