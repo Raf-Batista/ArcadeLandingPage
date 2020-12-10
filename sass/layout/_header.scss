@@ -4,9 +4,10 @@
         to bottom right, 
         rgba($color-secondary, 0.8), 
         rgba(lighten($color-tertiary, 25%), 0.8)), 
-        url('../../images/arc-1.jpg');
+        url(../images/arc-1.jpg);
     background-size: cover;
     background-position: top;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0% 100%);
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0% 100%);
 
     &__text {
