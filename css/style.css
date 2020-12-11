@@ -47,13 +47,13 @@ body {
 .heading-primary--main {
   display: block;
   font-size: 6rem;
-  animation: moveInFromLeft 1s ease-out;
+  animation: moveInFromLeft 1.5s ease-out;
   margin-bottom: 1rem; }
 
 .heading-primary--sub {
   display: block;
   font-size: 3rem;
-  animation: moveInFromRight 1s ease-out;
+  animation: moveInFromRight 1.5s ease-out;
   margin-bottom: 3rem; }
 
 .heading-secondary {
@@ -238,7 +238,7 @@ p {
   opacity: 0; }
 
 .btn--animated {
-  animation: moveInBottom .5s ease-out .75s;
+  animation: moveInBottom 1s ease-out .75s;
   animation-fill-mode: backwards; }
 
 .btn-text:link, .btn-text:visited {

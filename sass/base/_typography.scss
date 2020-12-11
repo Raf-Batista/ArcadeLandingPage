@@ -9,14 +9,14 @@ body {
     &--main {
         display: block;
         font-size: 6rem;
-        animation: moveInFromLeft 1s ease-out;
+        animation: moveInFromLeft 1.5s ease-out;
         margin-bottom: 1rem;
     }
     
     &--sub {
         display: block;
         font-size: 3rem;
-        animation: moveInFromRight 1s ease-out;
+        animation: moveInFromRight 1.5s ease-out;
         margin-bottom: 3rem;
     }
 }
