@@ -8,13 +8,13 @@
     padding: 6rem 9rem 10rem;
     transform: skew(-15deg);
     font-size: $default-font-size;
+    position: relative;
 
     // To make this into a circle, the element needs to be floated and have dimensions. In this case we set a width and height and float to left
     &__shape {
         width: 15rem;
         height: 15rem;
-        float: left;
-        background-color: orangered; 
+        float: left; 
         -webkit-shape-outside: circle(50% at 50% 50%);
         shape-outside: circle(50% at 50% 50%);
         -webkit-clip-path: circle(50% at 50% 50%);
@@ -24,9 +24,38 @@
 
     &__image {
         height: 100%;
+        transform: translateX(-3rem) scale(1.4); // We can use transform and translate to change the position of the picture
+        transition: all .5s;
+        // If there are issues with transform, set backface-visibility to hidden
+
     }
 
     &__text {
         transform: skew(15deg);
+    }
+
+    &__caption {
+        position: absolute;
+        top: 50%;
+        left: 50%; 
+        transform: translate(-50%, 20%); // We want the text to be positioned on the lower part of the picture
+        color: $color-white;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 2rem;
+        opacity: 0;
+        transition: all .5s;
+     //   backface-visibility: hidden; // Fixes shaking, works on latest version of chrome without this
+    }
+
+    &:hover &__caption {
+        opacity: 1;
+        transform: translate(-50%, -50%); // We need to use the same translate function, using translate x or y when we set the non hover state to translate will result in the text being in a different position
+    }
+
+    &:hover &__image {
+        transform:translateX(-3rem) scale(1);
+        filter: blur(6px) brightness(80%);
+        
     }
 }
