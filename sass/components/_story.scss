@@ -9,7 +9,7 @@
     transform: skew(-15deg);
     font-size: $default-font-size;
     position: relative;
-
+    
     // To make this into a circle, the element needs to be floated and have dimensions. In this case we set a width and height and float to left
     &__shape {
         width: 15rem;
@@ -20,14 +20,14 @@
         -webkit-clip-path: circle(50% at 50% 50%);
         clip-path: circle(50% at 50% 50%);
         transform: translateX(-3rem) skew(15deg);
+        
     }
 
     &__image {
         height: 100%;
-        transform: translateX(-3rem) scale(1.4); // We can use transform and translate to change the position of the picture
+        transform: translateX(-3rem) scale(1.2); // We can use transform and translate to change the position of the picture
         transition: all .5s;
         // If there are issues with transform, set backface-visibility to hidden
-
     }
 
     &__text {
