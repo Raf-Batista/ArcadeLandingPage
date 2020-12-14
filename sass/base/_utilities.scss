@@ -2,8 +2,21 @@
 
 .u-margin-top-md {margin-top: 6rem};
 
-.u-margin-bottom-lg { margin-bottom: 8rem; }
-.u-margin-bottom-med { margin-bottom: 6rem; }
+.u-margin-bottom-lg { 
+    margin-bottom: 8rem; 
+
+    @include respond(tab-port) {
+        margin-bottom: 5rem; 
+    }
+}
+
+.u-margin-bottom-med { 
+    margin-bottom: 6rem; 
+
+    @include respond(tab-port) {
+        margin-bottom: 3rem; 
+    }
+}
 .u-margin-bottom-sm { margin-bottom: 1.5rem; }
 
 .u-negative-margin-md { margin-top: -5rem}
