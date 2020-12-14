@@ -2,6 +2,10 @@
     background-color: $color-grey-light; 
     padding: 35rem 0;
     margin-top: -20vh;
+
+    @include respond(tab-port) {
+        padding: 25rem 0;
+    }
 }
 
 .section-features {
@@ -20,6 +24,10 @@
     & > * {
         transform: skewY(7deg);
     }
+
+    @include respond(tab-port) {
+        padding: 10rem 0;
+    }
 }
 
 .section-arcades {
@@ -27,12 +35,20 @@
     padding-top: 50rem;
     padding-bottom: 1rem;
     margin-top: -23vh;
+
+    @include respond(tab-port) {
+        padding-top: 30rem;
+    }
 }
 
 .section-stories {
     padding: 15rem 0;
     position: relative;
     overflow: hidden;
+
+    @include respond(tab-port) {
+        padding: 10rem 0;
+    }
 }
 
 .section-book {
