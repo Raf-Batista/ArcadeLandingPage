@@ -9,6 +9,14 @@
     transform: skew(-15deg);
     font-size: $default-font-size;
     position: relative;
+
+    @include respond(tab-port) {
+        width: 85%; 
+    }
+
+    @include respond(phone) {
+        transform: skew(0);
+    }
     
     // To make this into a circle, the element needs to be floated and have dimensions. In this case we set a width and height and float to left
     &__shape {
@@ -20,6 +28,10 @@
         -webkit-clip-path: circle(50% at 50% 50%);
         clip-path: circle(50% at 50% 50%);
         transform: translateX(-3rem) skew(15deg);
+
+        @include respond(phone) {
+            transform: translateX(-3rem) skew(0);
+        }
         
     }
 
@@ -32,6 +44,10 @@
 
     &__text {
         transform: skew(15deg);
+
+        @include respond(phone) {
+            transform: skew(0);
+        }
     }
 
     &__caption {
