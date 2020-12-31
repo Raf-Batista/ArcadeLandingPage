@@ -1,5 +1,13 @@
+.section-about {
+    overflow: hidden;
+}
+
 .composition {
     position: relative;
+
+    @include respond(tab-land) {
+        
+    }
 
     &__photo {
         width: 55%; 
