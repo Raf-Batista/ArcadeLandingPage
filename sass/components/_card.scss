@@ -11,8 +11,9 @@
         position: absolute; 
         top: 0;
         left: 0;
-        width: 100%; // We need 100 percent width of the element will take up the width of the text
-        backface-visibility: hidden; // Fix the animation issue since we don't want the element behind to be seen
+        width: 100%; 
+        -webkit-backface-visibility: hidden; 
+        backface-visibility: hidden; 
         border-radius: .5rem;
         box-shadow: 0 1rem 2rem rgba($color-black, .15);
 
